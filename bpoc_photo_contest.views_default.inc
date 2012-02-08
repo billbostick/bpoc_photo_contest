@@ -246,6 +246,7 @@ function bpoc_photo_contest_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
+  $handler->override_option('use_pager', '1');
   $handler->override_option('style_options', array(
     'grouping' => '',
   ));
