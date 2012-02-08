@@ -749,7 +749,8 @@ function bpoc_photo_contest_content_default_fields() {
     'suffix' => '',
     'min' => '',
     'max' => '',
-    'allowed_values' => '',
+    'allowed_values' => '0|I do not agree to the contest rules and terms of use.
+1|I agree to the contest rules and terms of use.',
     'allowed_values_php' => '',
     'widget' => array(
       'default_value' => array(
@@ -760,7 +761,7 @@ function bpoc_photo_contest_content_default_fields() {
       'default_value_php' => NULL,
       'label' => 'User Agreement',
       'weight' => '6',
-      'description' => 'I agree to the contest rules and terms of use.',
+      'description' => '',
       'type' => 'optionwidgets_onoff',
       'module' => 'optionwidgets',
     ),
