@@ -57,3 +57,12 @@ function bpoc_photo_contest_node_info() {
   );
   return $items;
 }
+
+/**
+ * Implementation of hook_views_api().
+ */
+function bpoc_photo_contest_views_api() {
+  return array(
+    'api' => '2',
+  );
+}
