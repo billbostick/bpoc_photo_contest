@@ -11,9 +11,10 @@ function bpoc_photo_contest_views_default_views() {
   $view->name = 'bpoc_photo_contest';
   $view->description = '';
   $view->tag = '';
+  $view->view_php = '';
   $view->base_table = 'node';
-  $view->core = 6;
-  $view->api_version = '2';
+  $view->is_cacheable = FALSE;
+  $view->api_version = 2;
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('relationships', array(
@@ -35,10 +36,8 @@ function bpoc_photo_contest_views_default_views() {
         'text' => '',
         'make_link' => 0,
         'path' => '',
-        'absolute' => 0,
         'link_class' => '',
         'alt' => '',
-        'rel' => '',
         'prefix' => '',
         'suffix' => '',
         'target' => '',
@@ -53,7 +52,6 @@ function bpoc_photo_contest_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
-      'hide_alter_empty' => 1,
       'link_to_node' => 0,
       'label_type' => 'none',
       'format' => 'contest_thumbnail_linked',
@@ -64,6 +62,7 @@ function bpoc_photo_contest_views_default_views() {
         'multiple_reversed' => FALSE,
       ),
       'exclude' => 0,
+      'hide_alter_empty' => 1,
       'id' => 'field_contest_photo_fid',
       'table' => 'node_data_field_contest_photo',
       'field' => 'field_contest_photo_fid',
@@ -149,10 +148,8 @@ function bpoc_photo_contest_views_default_views() {
         'text' => '[field_contest_vote_string_value]',
         'make_link' => 1,
         'path' => 'node/[nid]/vote/nojs',
-        'absolute' => 0,
-        'link_class' => 'ctools-use-dialog contest-submissions',
+        'link_class' => 'ctools-use-dialog vote-link',
         'alt' => '',
-        'rel' => '',
         'prefix' => '',
         'suffix' => '',
         'target' => '',
@@ -167,8 +164,8 @@ function bpoc_photo_contest_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
-      'hide_alter_empty' => 0,
       'exclude' => 0,
+      'hide_alter_empty' => 0,
       'id' => 'nothing',
       'table' => 'views',
       'field' => 'nothing',
@@ -195,7 +192,7 @@ function bpoc_photo_contest_views_default_views() {
       'field' => 'field_contest_ref_nid',
       'validate_user_argument_type' => 'uid',
       'validate_user_roles' => array(
-        2 => 0,
+        '2' => 0,
       ),
       'relationship' => 'none',
       'default_options_div_prefix' => '',
@@ -246,6 +243,8 @@ function bpoc_photo_contest_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
+  $handler->override_option('use_ajax', TRUE);
+  $handler->override_option('items_per_page', 15);
   $handler->override_option('use_pager', '1');
   $handler->override_option('style_options', array(
     'grouping' => '',
