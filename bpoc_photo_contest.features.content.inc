@@ -144,7 +144,7 @@ function bpoc_photo_contest_content_default_fields() {
       ),
       'teaser' => array(
         'format' => 'default',
-        'exclude' => 1,
+        'exclude' => 0,
       ),
       'full' => array(
         'format' => 'default',
@@ -232,7 +232,7 @@ function bpoc_photo_contest_content_default_fields() {
     ),
     'widget_active' => '1',
     'type' => 'email',
-    'required' => '0',
+    'required' => '1',
     'multiple' => '0',
     'module' => 'email',
     'active' => '1',
@@ -289,7 +289,7 @@ function bpoc_photo_contest_content_default_fields() {
     ),
     'widget_active' => '1',
     'type' => 'text',
-    'required' => '0',
+    'required' => '1',
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
