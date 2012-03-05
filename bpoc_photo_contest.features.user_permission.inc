@@ -18,7 +18,7 @@ function bpoc_photo_contest_user_default_permissions() {
   $permissions['edit own photo_submission content'] = array(
     'name' => 'edit own photo_submission content',
     'roles' => array(
-      '0' => 'anonymous user',
+      '0' => 'authenticated user',
     ),
   );
 
