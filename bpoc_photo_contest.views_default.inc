@@ -15,6 +15,7 @@ function bpoc_photo_contest_views_default_views() {
   $view->base_table = 'node';
   $view->is_cacheable = FALSE;
   $view->api_version = 2;
+  $view->core = 0;
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('relationships', array(
@@ -341,6 +342,7 @@ function bpoc_photo_contest_views_default_views() {
         'button' => 'Use default',
       ),
     ),
+<<<<<<< HEAD
     'field_contest_video_embed' => array(
       'label' => 'Video',
       'alter' => array(
